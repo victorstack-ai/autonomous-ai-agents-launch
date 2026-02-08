@@ -24,6 +24,6 @@ test('renders landing page with main headline', () => {
 
 test('renders CTA button', () => {
   render(<LandingPage />)
-  const ctaButtons = screen.getAllByRole('button', { name: /Get Started/i })
+  const ctaButtons = screen.getAllByRole('link', { name: /Get Started/i })
   expect(ctaButtons.length).toBeGreaterThan(0)
 })

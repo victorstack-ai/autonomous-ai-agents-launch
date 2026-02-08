@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { 
   Bot, 
@@ -27,9 +28,9 @@ export default function LandingPage() {
             <a href="#technology" className="hover:text-white transition-colors">Technology</a>
             <a href="#security" className="hover:text-white transition-colors">Security</a>
           </div>
-          <button className="bg-white text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-zinc-200 transition-colors">
+          <Link href="/dashboard" className="bg-white text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-zinc-200 transition-colors">
             Get Started
-          </button>
+          </Link>
         </div>
       </nav>
 
@@ -59,9 +60,9 @@ export default function LandingPage() {
                 The world&#39;s first truly autonomous workforce is here.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <button className="w-full sm:w-auto bg-purple-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-purple-700 transition-all hover:scale-105 shadow-[0_0_40px_rgba(168,85,247,0.4)]">
+                <Link href="/dashboard" className="w-full sm:w-auto bg-purple-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-purple-700 transition-all hover:scale-105 shadow-[0_0_40px_rgba(168,85,247,0.4)] text-center block sm:inline-block">
                   Start Your Fleet
-                </button>
+                </Link>
                 <button className="w-full sm:w-auto border border-white/10 bg-white/5 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all">
                   Watch Demo
                 </button>
@@ -120,9 +121,9 @@ export default function LandingPage() {
             <p className="text-zinc-400 text-xl font-medium">
               Join the thousands of companies building the future on ai.com.
             </p>
-            <button className="bg-white text-black px-12 py-5 rounded-2xl font-black text-xl hover:bg-zinc-200 transition-all hover:scale-105">
+            <Link href="/dashboard" className="bg-white text-black px-12 py-5 rounded-2xl font-black text-xl hover:bg-zinc-200 transition-all hover:scale-105 inline-block">
               Get Started for Free
-            </button>
+            </Link>
           </div>
         </section>
       </main>
