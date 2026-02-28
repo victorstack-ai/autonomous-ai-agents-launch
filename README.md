@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Autonomous AI Agents Launch
 
-## Getting Started
+A polished landing page and dashboard for an AI agent management platform, built with Next.js 16, React 19, and Framer Motion.
 
-First, run the development server:
+![Screenshot placeholder](https://via.placeholder.com/1200x630?text=Autonomous+AI+Agents+Launch)
+
+## Features
+
+- **Landing Page** -- Hero section with animated gradient headline, stats bar, feature cards with hover animations, CTA section, and a full footer with navigation links
+- **Dashboard** -- Sidebar navigation, stat cards (active agents, total tasks, compute usage), and a live agent fleet list with real-time status indicators
+- **Smooth Animations** -- Framer Motion entrance animations, hover lift effects on feature cards, and pulsing status indicators for active agents
+- **Responsive Design** -- Mobile-first layout with adaptive grid columns, collapsible sidebar, and responsive typography scaling from `text-5xl` to `text-8xl`
+- **Reusable Components** -- Extracted `FeatureCard`, `SidebarItem`, `StatCard`, and `AgentRow` components with TypeScript prop types
+- **Testing** -- Vitest unit tests with React Testing Library and mocked Framer Motion for reliable component testing
+
+## Tech Stack
+
+| Layer        | Technology                          |
+| ------------ | ----------------------------------- |
+| Framework    | Next.js 16 (App Router)            |
+| UI Library   | React 19                            |
+| Language     | TypeScript 5                        |
+| Styling      | Tailwind CSS 4                      |
+| Animations   | Framer Motion 12                    |
+| Icons        | Lucide React                        |
+| Utilities    | clsx, tailwind-merge                |
+| Testing      | Vitest 4, React Testing Library 16  |
+| Linting      | ESLint 9 with eslint-config-next    |
+
+## Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/your-username/autonomous-ai-agents-launch.git
+cd autonomous-ai-agents-launch
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the landing page.
+Navigate to [http://localhost:3000/dashboard](http://localhost:3000/dashboard) to view the agent management dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description                        |
+| --------------- | ---------------------------------- |
+| `npm run dev`   | Start development server           |
+| `npm run build` | Create production build             |
+| `npm start`     | Serve production build              |
+| `npm run lint`  | Run ESLint                          |
+| `npm test`      | Run Vitest test suite               |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+autonomous-ai-agents-launch/
+├── public/                  # Static assets (favicon, images)
+├── src/
+│   ├── app/
+│   │   ├── dashboard/
+│   │   │   └── page.tsx     # Dashboard with sidebar, stats, and agent fleet
+│   │   ├── globals.css      # Tailwind CSS imports and global styles
+│   │   ├── layout.tsx       # Root layout with metadata and font config
+│   │   ├── page.tsx         # Landing page with hero, features, CTA, footer
+│   │   └── page.test.tsx    # Unit tests for the landing page
+│   ├── lib/
+│   │   └── utils.ts         # Utility functions (cn helper for class merging)
+│   └── test/
+│       └── setup.ts         # Vitest setup with jest-dom matchers
+├── eslint.config.mjs        # ESLint configuration
+├── next.config.ts           # Next.js configuration
+├── postcss.config.mjs       # PostCSS configuration (Tailwind plugin)
+├── tailwind.config.ts       # Tailwind CSS configuration (if present)
+├── tsconfig.json            # TypeScript configuration
+├── vitest.config.ts         # Vitest configuration
+└── package.json             # Dependencies and scripts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Testing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run the test suite with:
 
-## Deploy on Vercel
+```bash
+npm test
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tests use Vitest with React Testing Library and jsdom. Framer Motion is mocked to ensure stable, animation-free rendering during tests.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
